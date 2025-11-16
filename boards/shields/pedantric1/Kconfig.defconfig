@@ -1,0 +1,17 @@
+
+if SHIELD_pedantric1_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Pedantric1"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif # SHIELD_pedantric1_LEFT
+
+if SHIELD_pedantric1_LEFT || SHIELD_pedantric1_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif # SHIELD_pedantric1_LEFT || SHIELD_pedantric1_RIGHT
