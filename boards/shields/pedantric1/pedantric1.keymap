@@ -7,10 +7,11 @@
         // Include mouse behaviors
         #include <behaviors/mouse_keys.dtsi>
         // Define a scroll up/down behavior
-        scroll_up_down: scroll_behavior {
+        encoder_scroll: behavior_sensor_rotate_mouse_scroll {
             compatible = "zmk,behavior-sensor-rotate";
-            #binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DN>;
+            #sensor-binding-cells = <0>;
+            /* Bindings for clockwise and counter-clockwise rotation */
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
     };
 
@@ -27,7 +28,7 @@
             >;
             sensor-bindings = <
             &inc_dec_kp C_VOL_UP C_VOL_DN 
-            &scroll_up_down
+            &encoder_scroll
             >;
         };
        fnnav { // Layer 1
