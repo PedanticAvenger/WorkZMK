@@ -9,7 +9,7 @@
         // Define a scroll up/down behavior
         encoder_scroll: behavior_sensor_rotate_mouse_scroll {
             compatible = "zmk,behavior-sensor-rotate";
-            #binding-cells = <0>;
+            #sensor-binding-cells = <0>;
             /* Bindings for clockwise and counter-clockwise rotation */
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
