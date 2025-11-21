@@ -4,10 +4,13 @@
 
 / {
     behaviors {
-        sensor-rotate {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            sensor-bindings = <&scroll_up_down>;
-            bindings = <&msc_SCRL_UP>, <&msc_SCRL_DOWN>;
+        // Include mouse behaviors
+        #include <behaviors/mouse_keys.dtsi>
+        // Define a scroll up/down behavior
+        scroll_up_down: scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            // Use &msc to scroll the mouse wheel
+            bindings = <&msc SCRL_UP> <&msc SCRL_DOWN>;
         };
     };
 
