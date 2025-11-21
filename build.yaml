@@ -6,3 +6,5 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: cosmos_lemon_wireless
     shield: pedantric1_right
+  - board: seeeduino_xiao_ble
+    shield: pedadantic1_dongle prospector_adapter

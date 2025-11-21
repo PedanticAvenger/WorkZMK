@@ -1,5 +1,5 @@
 
-if SHIELD_pedantric1_LEFT
+if SHIELD_pedantric1_DONGLE
 
 config ZMK_KEYBOARD_NAME
     default "Pedantric1"
