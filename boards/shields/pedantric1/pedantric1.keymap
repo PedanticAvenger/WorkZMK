@@ -3,6 +3,13 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    behaviors {
+        sensor-rotate {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            sensor-bindings = <&scroll_up_down>;
+            bindings = <&msc_SCRL_UP>, <&msc_SCRL_DOWN>;
+        };
+    }
     keymap {
         compatible = "zmk,keymap";
         default_layer { // Layer 0
@@ -16,7 +23,7 @@
             >;
             sensor-bindings = <
             &inc_dec_kp C_VOL_UP C_VOL_DN 
-            &msc SCRL_UP SCRL_DN
+            &scroll_up_down
             >;
         };
        fnnav { // Layer 1
