@@ -9,7 +9,8 @@
             sensor-bindings = <&scroll_up_down>;
             bindings = <&msc_SCRL_UP>, <&msc_SCRL_DOWN>;
         };
-    }
+    };
+
     keymap {
         compatible = "zmk,keymap";
         default_layer { // Layer 0
