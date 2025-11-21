@@ -9,6 +9,7 @@
         // Define a scroll up/down behavior
         scroll_up_down: scroll {
             compatible = "zmk,behavior-sensor-rotate";
+            #binding-cells = <0>;
             // Use &msc to scroll the mouse wheel
             bindings = <&msc SCRL_UP> <&msc SCRL_DOWN>;
         };
